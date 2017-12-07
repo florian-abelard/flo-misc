@@ -1,0 +1,19 @@
+
+hostColor="\e[32m"
+export PS1="\[\e]0;\w\a\]\n\[$hostColor\]\u@\h \[\e[1;34m\]\t\[\e[0m\] \[\e[33m\]\w\[\e[0m\]\[\e[36m\]\$(__git_ps1)\[\e[0m\]\n\$ "
+
+# Aliases
+alias ll='ls -lah --color=auto'
+alias ..='cd ..'
+alias ...='cd ../../'
+alias ....='../../../'
+alias .....='../../../../'
+
+alias vi='vim'
+
+# grep matches colorization
+alias grep=' grep --color'
+
+# force git to be in english
+#LANG=en
+alias git='LANG=en_US.UTF-8 git'
