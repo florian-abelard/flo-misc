@@ -3,7 +3,7 @@
 Pour utiliser plusieurs comptes Git.
 
 A placer dans :
-> ~/.config
+> ~/.ssh/config
 
 Pour cloner un dépôt d'un compte "spécifique" :
 ```
