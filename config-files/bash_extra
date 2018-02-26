@@ -1,4 +1,2 @@
 hostColor="\e[32m"
 export PS1="\[\e]0;\w\a\]\n\[$hostColor\]\u@\h \[\e[1;34m\]\t\[\e[0m\] \[\e[33m\]\w\[\e[0m\]\[\e[36m\]\$(__git_ps1)\[\e[0m\]\n\$ "
-
-alias composer='/usr/local/bin/composer.phar'
