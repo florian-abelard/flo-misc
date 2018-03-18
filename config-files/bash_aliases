@@ -10,5 +10,3 @@ alias vi='vim'
 alias grep=' grep --color'
 
 alias git='LANG=en_US.UTF-8 git'
-
-alias composer='/usr/local/bin/composer.phar'
