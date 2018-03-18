@@ -1,4 +1,4 @@
-### "config" file
+### ssh config file
 
 Pour utiliser plusieurs comptes Git.
 
