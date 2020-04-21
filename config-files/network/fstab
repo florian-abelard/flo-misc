@@ -1,5 +1,5 @@
 # Remote documents
-//192.168.0.27/documents        /home/florian/remote/documents cifs uid=florian,gid=florian,dir_mode=0777,file_mode=0777,credentials=/root/.smbcredentials,iocharset=utf8,cache=loose,_netdev,x-systemd.automount   0       0
+//192.168.1.11/documents        /home/florian/remote/documents cifs uid=florian,gid=florian,dir_mode=0777,file_mode=0777,credentials=/root/.smbcredentials,iocharset=utf8,cache=loose,_netdev,x-systemd.automount,soft   0       0
 
 # Remote multimedia
-//192.168.0.27/multimedia       /home/florian/remote/multimedia cifs uid=florian,gid=florian,dir_mode=0777,file_mode=0777,credentials=/root/.smbcredentials,iocharset=utf8,cache=loose,_netdev,x-systemd.automount  0       0
+//192.168.1.11/multimedia       /home/florian/remote/multimedia cifs uid=florian,gid=florian,dir_mode=0777,file_mode=0777,credentials=/root/.smbcredentials,iocharset=utf8,cache=loose,_netdev,x-systemd.automount,soft  0       0
