@@ -7,7 +7,7 @@
 
 ```bash
 # Récupération des sources github
-git clone https://github.com/florian-abelard/flo-misc.git
+git clone git@github.com:florian-abelard/flo-misc.git
 
 # Mise en place des fichiers de configuration
 make config-install
