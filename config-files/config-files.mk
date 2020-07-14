@@ -10,8 +10,8 @@ config-install: config-bash-install config-terminator-install config-xfce-instal
 
 config-bash-install:
 	cp ~/.bashrc{,.back}
-	cp ~/.bash_aliases{,.back}
-	cp ~/.bash_completion{,.back}
+	test ! -e ~/.bash_aliases || cp ~/.bash_aliases{,.back}
+	test ! -e ~/.bash_completion || cp ~/.bash_completion{,.back}
 	cp ${HOST_CONFIG_SOURCE_PATH}/bash/bashrc ~/.bashrc
 	cp ${HOST_CONFIG_SOURCE_PATH}/bash/bash_aliases ~/.bash_aliases
 	cp ${HOST_CONFIG_SOURCE_PATH}/bash/bash_completion  ~/.bash_completion
@@ -19,7 +19,8 @@ config-bash-install:
 	cp ${HOST_CONFIG_SOURCE_PATH}/bash/bash_functions ~/.bash_functions
 
 config-terminator-install:
-	cp ~/.config/terminator/config{,.back}
+	test ! -e ~/.config/terminator/config || cp /.config/terminator/config{,.back}
+	test -e ~/.config/terminator/config || mkdir -p ~/.config/terminator/
 	cp ${HOST_CONFIG_SOURCE_PATH}/terminator/config ~/.config/terminator/
 
 config-xfce-install:
@@ -32,13 +33,16 @@ config-reset: config-bash-reset config-terminator-reset config-xfce-reset ##@con
 
 config-bash-reset:
 	mv ~/.bashrc{.back,}
-	mv ~/.bash_aliases{.back,}
-	mv ~/.bash_completion{.back,}
+	test ! -e ~/.bash_aliases.back || mv ~/.bash_aliases{.back,}
+	test -e ~/.bash_aliases.back || rm ~/.bash_aliases
+	test ! -e ~/.bash_completion.back || mv ~/.bash_completion{.back,}
+	test -e ~/.bash_completion.back || rm ~/.bash_completion
 	rm ~/.bash_extra
 	rm ~/.bash_functions
 
 config-terminator-reset:
-	cp ~/.config/terminator/config{.back,}
+	test ! -e ~/.config/terminator/config.back || cp ~/.config/terminator/config{.back,}
+	test -e ~/.config/terminator/config.back || rm ~/.config/terminator/config
 
 config-xfce-reset:
 	cp ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml{.back,}
