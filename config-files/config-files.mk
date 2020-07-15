@@ -18,6 +18,10 @@ config-bash-install: ##@config-files install bash config files
 	cp ${HOST_CONFIG_SOURCE_PATH}/bash/bash_extra ~/.bash_extra
 	cp ${HOST_CONFIG_SOURCE_PATH}/bash/bash_functions ~/.bash_functions
 
+config-git-install: #@config-files install git config files
+	test ! -e ~/.gitconfig || cp ~/.gitconfig{,.back}
+	cp ${HOST_CONFIG_SOURCE_PATH}/git/gitconfig ~/.gitconfig
+
 config-terminator-install: ##@config-files install terminator config files
 	test ! -e ~/.config/terminator/config || cp /.config/terminator/config{,.back}
 	test -e ~/.config/terminator/config || mkdir -p ~/.config/terminator/
