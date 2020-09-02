@@ -1,6 +1,6 @@
 [user]
     name = Florian Abélard
-    email = f.abelard@gmail.com
+    email = f.abelard.dev@gmail.com
 [core]
     preloadindex = true
     editor = vim
