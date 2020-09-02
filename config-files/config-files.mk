@@ -34,7 +34,10 @@ config-xfce-install: ##@config-files install xfce configuration
 	cp ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml{,.back}
 	cp ${HOST_CONFIG_SOURCE_PATH}/xfce/xfce4-keyboard-shortcuts.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml/
 
+config-font-install: ##@config-files install fonts
+	cp -r ${HOST_CONFIG_SOURCE_PATH}/font/JetBrainsMono ~/.local/share/fonts/ && fc-cache -f -v
+
 #------------------------------------------------------------------------------
 
-.PHONY: config-install config-bash-install config-terminator-install config-xfce-install
+.PHONY: config-install config-bash-install config-system-install config-terminator-install config-xfce-install
 # .SILENT: config-bash-install
