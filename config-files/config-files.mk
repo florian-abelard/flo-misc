@@ -6,7 +6,7 @@ HOST_CONFIG_SOURCE_PATH := ${HOST_SOURCE_PATH}/config-files
 
 #------------------------------------------------------------------------------
 
-config-install: config-bash-install config-system-install config-terminator-install ##@config-files install all system configuration
+config-install: config-bash-install config-system-install config-git-install config-terminator-install config-font-install ##@config-files install all system configuration
 
 config-bash-install: ##@config-files install bash configuration
 	cp ~/.bashrc{,.back}
@@ -39,5 +39,5 @@ config-font-install: ##@config-files install fonts
 
 #------------------------------------------------------------------------------
 
-.PHONY: config-install config-bash-install config-system-install config-terminator-install config-xfce-install
+.PHONY: config-install config-bash-install config-system-install config-git-install config-terminator-install config-xfce-install config-font-install
 # .SILENT: config-bash-install
